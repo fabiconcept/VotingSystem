@@ -1,0 +1,73 @@
+.btnx {
+    padding: 1rem;
+    font-size: small;
+    color: var(--main-color);
+    background-color: var(--white);
+    width: 100%;
+    text-align: center;
+    user-select: none;
+    border-radius: .65rem;
+    height: fit-content;
+    transition: var(--transition);
+    cursor: pointer;
+    opacity: 1;
+    border: 1px solid transparent;
+}
+
+.btnx.invalid {
+    background-color: var(--invalid);
+    cursor: not-allowed;
+    opacity: .75;
+    pointer-events: none;
+}
+
+.btnx:hover {
+    border: 1px solid var(--main-color-black);
+    transform: translateY(-2px);
+}
+
+.btnx:active {
+    transform: translateY(2px) scale(.95);
+    opacity: .9;
+}
+
+.form-g {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    border-bottom: 1px solid;
+    margin: 2rem 0 2.95rem 0;
+}
+
+.form-g .inp {
+    flex: 1;
+    padding: .25rem 0;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    transition: var(--transition);
+}
+
+.form-g:has(.inp:valid) {
+    border-bottom: 1px solid var(--main-color);
+}
+
+.form-g:has(.inp:placeholder-shown) label {
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    font-size: medium;
+    pointer-events: none;
+    opacity: .5;
+}
+
+.form-g label {
+    transition: var(--transition);
+    position: absolute;
+    font-size: small;
+    transform: translateY(-50%);
+    top: -1rem;
+    opacity: 1;
+    pointer-events: none;
+}
